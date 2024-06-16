@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --red:#d63a25;
+    --white:#fff;
+    --dark:#1e1c2a;
+    --beje: #FBF7EE;
+    --rosaclaro: #F6C2B8;
+    --rosaclaro2: #FFFFFF;
+}
+body{
+    color: var(--dark);
+    background: var(--beje);
+    height: 1100px;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    height: 60px;
+    background: var(--rosaclaro);
+    transition: all 0.5s;
+    position: absolute;
+}
+.navigation .logo{
+    color: var(--red);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--dark);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;  /*Espaçamento entre UL LI A*/
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--red);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #A49894;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background:#BF6647;
+}
+
+.text-h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 90px;
+    font-size: 3.3rem;
+}
+
+.container1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px 50px;
+    flex-wrap: wrap; /*Permite que os item quebrem*/
+    padding: 100px 100px; /*Deixando todo o conteudo do container dentro dele*/
+  }
+  
+  .container1 .card1 {
+    display: flex;
+    justify-content: left; /*Movendo tudo para a esquerda*/
+    align-items: flex-start;
+    width: 1000px;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgb(218, 218, 218);
+    border: #ff0000;
+    background: var(--#ff0000);
+    margin-top: -80px;
+  }
+  
+  /* .container1 .card1:hover {
+    height: 200px;
+    width: 200px;
+    scale: 1.2;
+  } */
+  
+  .container1 .card1 .caixaimg1 {
+    /* position: absolute; */
+    justify-content: flex-start;
+    align-items: flex-start;    
+  }
+  
+  .container1 .card1 .caixaimg1 img {
+    object-fit: cover;
+    width: 150px;
+    height: 160px;
+    text-align: left;
+    border-radius: 90px;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+  }
+  
+  .container1 .card1 .conteudo1 h2 {
+      font-size: .90rem;
+      font-weight: 300;
+      line-height: 1rem;
+      color: black;
+      overflow: hidden;
+      text-align: start;
+      padding-top: 40px;
+      padding-right: 5px;
+      padding-left: 20px;
+  }
+
+/*----------------------------------------------------------------------------------------------------------*/
+  .container2 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 100px 50px;
+    flex-wrap: wrap; /*Permite que os item quebrem*/
+    padding: 30px 100px; /*Deixando todo o conteudo do container dentro dele*/
+  }
+  
+  .container2 .card2 {
+    display: flex;
+    justify-content: right; /*Movendo tudo para a esquerda*/
+    align-items: flex-start;
+    width: 1000px;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgb(218, 218, 218);
+    border: #ff0000;
+    background: var(--#ff0000);
+    margin-top: -80px;
+  }
+  
+  /* .container1 .card1:hover {
+    height: 200px;
+    width: 200px;
+    scale: 1.2;
+  } */
+  
+  .container2 .card2 .caixaimg2 {
+    /* position: absolute; */
+    justify-content: flex-start;
+    align-items: flex-start;    
+  }
+  
+  .container2 .card2 .caixaimg2 img {
+    object-fit: cover;
+    width: 150px;
+    height: 160px;
+    text-align: right;
+    border-radius: 90px;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .container2 .card2 .conteudo2 h2 {
+      font-size: .90rem;
+      font-weight: 300;
+      line-height: 1rem;
+      color: black;
+      overflow: hidden;
+      text-align: right;
+      padding-top: 40px;
+      padding-right: 30px ;  
+  }
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .whatsapp {
+        display: flex;
+        justify-content: flex-end;
+        margin: -35px 1px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .container .card .conteudo {
+        flex-direction: column;
+    }
+
+    .container1 {
+        /* padding: 100px 20px; Deixando todo o conteudo do container dentro dele */
+        padding: 20px 20px;
+        margin-top: 90px;
+      }
+
+      .container1 .card1 .conteudo1 h2 {
+        padding-top: 20px;
+        padding-right: 5px;
+        padding-left: 20px;
+    }
+
+    .container2 {
+        padding: 100px 20px; /*Deixando todo o conteudo do container dentro dele*/
+      }
+
+      .container2 .card2 .conteudo2 h2 {
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .container2 .card2 {
+        height: 200px;
+    }
+}
